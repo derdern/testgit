@@ -1,13 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView } from "react-native";
+import React from "react";
+
+import GlobalStyles from "./GlobalStyle";
+import HeaderTabs from "../components/HeaderTabs";
+import SearchBar from "../components/SearchBar";
 
 export default function Home() {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={GlobalStyles.droidSafeArea}>
+      <View style={{ backgroundColor: "white", padding: 15 }}>
+        <HeaderTabs />
+        <SearchBar />
+      </View>
+    </SafeAreaView>
   );
 }
-
-
-   
